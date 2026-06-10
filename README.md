@@ -162,7 +162,7 @@ Seven SQL analysis queries were written covering all five business questions, us
 
 ## Data Model
 
-![Data Model](Data_Model.Data_Model.png)
+![Data Model](Data_Model.Data_Model.jpg)
 
 The data model follows a Star Schema pattern with fact_inventory_movement as the central fact table connected to two dimension tables. The model was defined in MySQL using foreign key constraints and reverse engineered to produce the ERD in MySQL Workbench.
 
@@ -190,7 +190,7 @@ A dynamic Date Table was also created in Power BI using: CALENDAR(MIN(fact_inven
 
 ### Q1: Network-Wide Shrinkage Summary
 
-![Query1](Query1/Query1.png)
+![Query1](Query1/Query1.jpg)
 
 The network lost a total of 29.1 million gallons of product across the four-year period, representing a cumulative financial loss of $115.41 million. All three product types exceed the industry benchmark of 0.5%.
 
@@ -198,7 +198,7 @@ The network lost a total of 29.1 million gallons of product across the four-year
 
 ### Q2: Depot Risk Ranking
 
-![Query2](Query2/Query2.png)
+![Query2](Query2/Query2.jpg)
 
 All eight depots exceed the industry benchmark of 0.5%. Tampa Terminal and Mobile Terminal are the highest risk locations, together accounting for $40.6M (36%) of total network losses.
 
@@ -206,7 +206,7 @@ All eight depots exceed the industry benchmark of 0.5%. Tampa Terminal and Mobil
 
 ### Q3: Year-Over-Year Trend
 
-![Query3](Query3/Query3.png)
+![Query3](Query3/Query3.jpg)
 
 Annual losses are improving significantly across the network, declining from $41.8M in 2021 to $7.9M in 2024 an 81% reduction in annual financial loss.
 
@@ -214,7 +214,7 @@ Annual losses are improving significantly across the network, declining from $41
 
 ### Q4: Seasonal Patterns
 
-![Query4](Query4/Query4.png)
+![Query4](Query4/Query4.jpg)
 
 Clear seasonal patterns emerge in monthly shrinkage data. January and July consistently show the highest average shrinkage rates across all products.
 
@@ -230,7 +230,7 @@ Clear seasonal patterns emerge in monthly shrinkage data. January and July consi
 
 ### Q5: Depot × Product Risk Matrix
 
-![Query5](Query5/Query5.png)
+![Query5](Query5/Query5.jpg)
 
 14 of 24 depot-product combinations are classified as High Risk (shrinkage rate above 1%). The five highest-risk combinations account for a disproportionate share of total network losses.
 
@@ -238,7 +238,7 @@ Clear seasonal patterns emerge in monthly shrinkage data. January and July consi
 
 ### Q6: Shipment-Level Analysis
 
-![Query6](Query6/Query6.png)
+![Query6](Query6/Query6.jpg)
 
 18,598 shipments were analysed for shrinkage. The median shipment shrinkage rate of 0.47% is just below the 0.5% benchmark, indicating most individual shipments perform acceptably. However 85 shipments show extreme shrinkage rates above 75%, representing a critical anomaly signal.
 
@@ -260,7 +260,7 @@ Clear seasonal patterns emerge in monthly shrinkage data. January and July consi
 
 ### Page 1: Network Overview
 
-![Page1](Page1/Page1.png)
+![Page1](Page1/Page1.jpg)
 
 The overview page provides leadership with a one-glance summary of network-wide shrinkage performance.
 
@@ -322,7 +322,7 @@ All eight rows visible in the table are classified as High Risk confirming that 
 
 ### Page 2: Depot Analysis
 
-![Page2](Page2/Page2.png)
+![Page2](Page2/Page2.jpg)
 
 The depot analysis page supports operations managers in drilling into depot-level performance and trend behaviour.
 
@@ -376,7 +376,7 @@ Houston Terminal's bar at $6.7M is notably shorter than all others, less than a 
 ### Page 3: Product & Shipment Deep Dive
 
 
-![Page3](Page3/Page3.png)
+![Page3](Page3/Page3.jpg)
 
 
 The product and shipment page supports the finance and compliance team in understanding product-level and shipment-level risk.
