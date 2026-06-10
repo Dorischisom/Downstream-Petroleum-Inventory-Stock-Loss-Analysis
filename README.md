@@ -162,7 +162,7 @@ Seven SQL analysis queries were written covering all five business questions, us
 
 ## Data Model
 
-![Data Model](Datamodel/Data_Model.jpg)
+![Data Model](Datamodel/Data_Model.JPG)
 
 The data model follows a Star Schema pattern with fact_inventory_movement as the central fact table connected to two dimension tables. The model was defined in MySQL using foreign key constraints and reverse engineered to produce the ERD in MySQL Workbench.
 
