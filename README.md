@@ -162,7 +162,7 @@ Seven SQL analysis queries were written covering all five business questions, us
 
 ## Data Model
 
-![Data Model](DataModel.DataModel.png)
+![Data Model](Data_Model.Data_Model.png)
 
 The data model follows a Star Schema pattern with fact_inventory_movement as the central fact table connected to two dimension tables. The model was defined in MySQL using foreign key constraints and reverse engineered to produce the ERD in MySQL Workbench.
 
@@ -190,11 +190,15 @@ A dynamic Date Table was also created in Power BI using: CALENDAR(MIN(fact_inven
 
 ### Q1: Network-Wide Shrinkage Summary
 
+![Query1](Query1/Query1.png)
+
 The network lost a total of 29.1 million gallons of product across the four-year period, representing a cumulative financial loss of $115.41 million. All three product types exceed the industry benchmark of 0.5%.
 
 **Key insight:** Regular Gasoline accounts for 47% of total financial losses despite having the highest volume throughput. Its 1.51% shrinkage rate is the worst of the three products and is strongly linked to heat-related evaporation in Gulf Coast summer months.
 
 ### Q2: Depot Risk Ranking
+
+![Query2](Query2/Query2.png)
 
 All eight depots exceed the industry benchmark of 0.5%. Tampa Terminal and Mobile Terminal are the highest risk locations, together accounting for $40.6M (36%) of total network losses.
 
@@ -202,11 +206,15 @@ All eight depots exceed the industry benchmark of 0.5%. Tampa Terminal and Mobil
 
 ### Q3: Year-Over-Year Trend
 
+![Query3](Query3/Query3.png)
+
 Annual losses are improving significantly across the network, declining from $41.8M in 2021 to $7.9M in 2024 an 81% reduction in annual financial loss.
 
 **Key insight:** The 2024 shrinkage rate of 0.37% is approaching the 0.5% industry benchmark for the first time. However the cumulative $114.1M loss over four years underscores the cost of the earlier years of high shrinkage and reinforces the urgency of sustaining improvement momentum.
 
 ### Q4: Seasonal Patterns
+
+![Query4](Query4/Query4.png)
 
 Clear seasonal patterns emerge in monthly shrinkage data. January and July consistently show the highest average shrinkage rates across all products.
 
@@ -222,11 +230,15 @@ Clear seasonal patterns emerge in monthly shrinkage data. January and July consi
 
 ### Q5: Depot × Product Risk Matrix
 
+![Query5](Query5/Query5.png)
+
 14 of 24 depot-product combinations are classified as High Risk (shrinkage rate above 1%). The five highest-risk combinations account for a disproportionate share of total network losses.
 
 **Key insight:** Baton Rouge Depot's ATF shrinkage rate of 3.48% is nearly 7 times the industry benchmark. This is the single highest-risk depot-product combination in the network and warrants immediate investigation into ATF handling protocols at this location.
 
 ### Q6: Shipment-Level Analysis
+
+![Query6](Query6/Query6.png)
 
 18,598 shipments were analysed for shrinkage. The median shipment shrinkage rate of 0.47% is just below the 0.5% benchmark, indicating most individual shipments perform acceptably. However 85 shipments show extreme shrinkage rates above 75%, representing a critical anomaly signal.
 
@@ -248,21 +260,24 @@ Clear seasonal patterns emerge in monthly shrinkage data. January and July consi
 
 ### Page 1: Network Overview
 
+![Page1](Page1/Page1.png)
+
 The overview page provides leadership with a one-glance summary of network-wide shrinkage performance.
 
 **KPI Cards**
 
-Total Volume Received of 2.23 billion gallons with a 33.8% YoY increase confirms that VistaFuel's network throughput is growing strongly driven by expanding customer demand and increased depot activity across the Gulf Coast region.
+- Total Volume Received of 2.23 billion gallons.
 
-Total Volume Delivered of 2.20 billion gallons with a 34.3% YoY increase tracks closely with receipts, indicating that the majority of received product is reaching customers. The gap between received and delivered volumes 29.14 million gallons represents the full extent of network shrinkage.
+- Total Volume Delivered of 2.20 billion gallons.
 
-Total Volume Lost of 29.14 million gallons with a 7.7% YoY increase is a concern signal. Despite overall network improvement, the volume lost is still growing in absolute terms as throughput increases meaning shrinkage control must keep pace with volume growth to prevent financial exposure from rising.
+- Total Volume Lost of 29.14 million gallons.
 
-Total Financial Loss of $115.41M with a 6.0% YoY increase reflects the same dynamic: higher throughput at higher prices produces higher absolute loss values even when shrinkage rates are improving. This figure represents the cumulative cost of the network's inefficiency over the full analysis period.
+- Total Financial Loss of $115.41M.
 
-Network Shrinkage Rate of 1.31% with a 19.6% YoY improvement is the most encouraging KPI on the page. A 19.6% reduction in shrinkage rate year over year demonstrates that operational improvements are genuinely working but at 1.31% the network remains more than double the 0.5% industry benchmark.
+- Network Shrinkage Rate of 1.31% more than double the 0.5% industry benchmark.
 
-High Risk Combinations of 14 out of 24 depot-product pairs confirms that the shrinkage problem is not isolated to one or two locations; it is spread across more than half of all depot-product combinations in the network, indicating a systemic rather than localised issue.
+- High Risk Combinations of 14 out of 24 depot-product pairs confirms that the shrinkage problem is not isolated to one or two locations; it is spread across more than half of all depot-product combinations in the network, indicating a systemic rather than localised issue.
+
 
 **How Has Our Annual Financial Loss Trended Over the 4-Year Period?**
 
@@ -272,6 +287,7 @@ The steepest decline occurs between 2023 and 2024 the line drops most sharply in
 
 The near-zero value at the end of 2024 is the headline finding of the entire dashboard: the network is approaching the point where annual losses are no longer a major financial burden but reaching and sustaining that position requires the operational interventions outlined in the recommendations.
 
+
 **Which Product Type Accounts for the Greatest Share of Total Loss? (Donut Chart)**
 
 Regular Gasoline dominates with $50.99M representing 47.39% of all network losses; nearly half of the total financial exposure from a single product type. This concentration in gasoline is not coincidental: gasoline is the most volatile of the three products, most susceptible to heat-driven evaporation in Gulf Coast summer conditions, and handled in the highest volumes across all eight depots.
@@ -280,6 +296,8 @@ Automotive Gas Oil (Diesel) contributes $32.29M (30.01%) a significant share des
 
 Aviation Turbine Fuel accounts for $24.31M (22.6%) the smallest share despite ATF being the highest-priced product per gallon. This suggests that the stricter aviation handling protocols applied to ATF are providing some level of protection compared to gasoline and diesel.
 
+
+
 **Which Depots Carry the Highest Shrinkage Risk Across the Network? (Bar Chart)**
 
 Tampa Terminal leads the network with a 1.89% shrinkage rate, the longest and darkest red bar on the chart representing a rate nearly four times the 0.5% industry benchmark. The visual immediately communicates that Tampa Terminal is an outlier requiring priority attention.
@@ -287,6 +305,8 @@ Tampa Terminal leads the network with a 1.89% shrinkage rate, the longest and da
 Houston Terminal at 0.61% stands as the network's best performer, the only depot showing amber rather than red colouring yet even Houston exceeds the benchmark, reinforcing that this is a network-wide systemic problem rather than a few isolated underperformers.
 
 The colour gradient from dark red through amber tells a clear operational story: six depots are in the High Risk zone above 1%, two are in the Medium Risk zone between 0.5% and 1%, and zero are in the Low Risk zone below 0.5%.
+
+
 
 **Which Depot-Product Combinations Represent the Highest Financial Exposure? (Risk Matrix Table)**
 
@@ -298,17 +318,22 @@ All eight rows visible in the table are classified as High Risk confirming that 
 
 ---
 
+
+
 ### Page 2: Depot Analysis
+
+![Page2](Page2/Page2.png)
 
 The depot analysis page supports operations managers in drilling into depot-level performance and trend behaviour.
 
 **KPI Cards**
 
-Houston Terminal is confirmed as the best performing depot in the network with the lowest shrinkage rate of 0.61% yet even the network's top performer exceeds the 0.5% industry benchmark, reinforcing that shrinkage is a systemic network-wide challenge rather than an isolated depot problem.
+- Houston Terminal is confirmed as the best performing depot in the network with the lowest shrinkage rate of 0.61% yet even the network's top performer exceeds the 0.5% industry benchmark, reinforcing that shrinkage is a systemic network-wide challenge rather than an isolated depot problem.
 
-Tampa Terminal is the worst performing depot with a 1.89% shrinkage rate nearly four times the industry benchmark and $20.9M in total losses over the four-year period. Tampa Terminal's consistent worsening trend from 2021 to 2024 makes it the single highest priority location for operational intervention.
+- Tampa Terminal is the worst performing depot with a 1.89% shrinkage rate nearly four times the industry benchmark and $20.9M in total losses over the four-year period. Tampa Terminal's consistent worsening trend from 2021 to 2024 makes it the single highest priority location for operational intervention.
 
-The Average Network Shrinkage Rate of 1.31% sits 162% above the 0.5% industry benchmark. This gap represents the collective operational inefficiency of all eight depots and quantifies the financial upside available if the network reaches benchmark performance.
+- The Average Network Shrinkage Rate of 1.31% sits 162% above the 0.5% industry benchmark. This gap represents the collective operational inefficiency of all eight depots and quantifies the financial upside available if the network reaches benchmark performance.
+
 
 **How Has Each Depot's Shrinkage Rate Changed Year Over Year? (Line Chart)**
 
@@ -321,6 +346,7 @@ Houston Terminal's line remains the lowest and most stable across all four years
 Pensacola Depot shows extreme volatility recording the worst shrinkage rate in 2021, dropping significantly in 2022, spiking again in 2023, then moderating in 2024. This erratic pattern suggests inconsistent operational practices or seasonal equipment issues rather than a steady infrastructure problem.
 
 The overall directional story is positive; most depot lines trend downward from 2021 to 2024, confirming that network-wide improvements are real and not limited to one or two locations.
+
 
 **Which States Carry the Highest Product Loss Burden? (Clustered Column Chart)**
 
@@ -336,6 +362,7 @@ Tampa Terminal tops the table with 1.89% shrinkage and $20.96M in losses; the gr
 
 Houston Terminal sits at the bottom of the table with 0.61% and $6.71M the lightest colour in the shrinkage rate gradient and the only depot classified as Medium Risk rather than High Risk, providing a clear visual contrast between best and worst performers.
 
+
 **Which Depots Contributed Most to Financial Losses? (Bar Chart)**
 
 Tampa Terminal leads with $21.0M followed closely by Mobile Terminal at $19.7M and Pensacola Depot at $17.9M. These three Florida and Alabama depots together account for $58.6M more than 50% of the total $115.41M network loss from just three of eight locations.
@@ -344,17 +371,25 @@ Houston Terminal's bar at $6.7M is notably shorter than all others, less than a 
 
 ---
 
+
+
 ### Page 3: Product & Shipment Deep Dive
+
+
+![Page3](Page3/Page3.png)
+
 
 The product and shipment page supports the finance and compliance team in understanding product-level and shipment-level risk.
 
+
 **KPI Cards**
 
-Regular Gasoline is confirmed as the highest risk product appearing as the worst performer in shrinkage rate across most years and accounting for 47.39% of total network losses. Its combination of high throughput volume, high volatility, and Gulf Coast heat exposure makes it the primary target for shrinkage reduction efforts.
+- Regular Gasoline is confirmed as the highest risk product appearing as the worst performer in shrinkage rate across most years and accounting for 47.39% of total network losses. Its combination of high throughput volume, high volatility, and Gulf Coast heat exposure makes it the primary target for shrinkage reduction efforts.
 
-85 extreme outlier shipments with shrinkage rates above 75% represent the most urgent operational finding in the entire analysis. These are not normal operational losses at 75%+ shrinkage, more than three quarters of the product received on each of these shipments never reached the customer. The cause must be investigated physically before conclusions are drawn.
+- 85 extreme outlier shipments with shrinkage rates above 75% represent the most urgent operational finding in the entire analysis. These are not normal operational losses at 75%+ shrinkage, more than three quarters of the product received on each of these shipments never reached the customer. The cause must be investigated physically before conclusions are drawn.
 
-Total Shipments of 19K reflects all unique shipment IDs in the fact table.
+- Total Shipments of 19K reflects all unique shipment IDs in the fact table.
+
 
 **Which Product Type Has Driven the Highest Shrinkage Rate Each Year? (Clustered Column Chart)**
 
@@ -363,6 +398,7 @@ Regular Gasoline consistently records the highest shrinkage rate across all four
 Aviation Turbine Fuel shows an unexpected pattern recording higher shrinkage than Diesel in 2021 and 2022 despite ATF's stricter handling protocols. This anomaly is largely driven by the Baton Rouge Depot ATF combination which carries a 3.48% shrinkage rate and disproportionately influences the ATF network average.
 
 The 2024 column is the most important visual on this chart; all three products show their lowest shrinkage rates of the four-year period, with Regular Gasoline finally approaching the 0.5% benchmark at 0.5%. This confirms that the improvement trend is real, sustained, and product-wide.
+
 
 **Are There Seasonal Months Where Shrinkage Consistently Peaks Across Products? (Line Chart)**
 
@@ -374,6 +410,7 @@ November (Pre-Winter Peak) a third peak emerges in November. This reflects pre-w
 
 December consistently shows negative shrinkage across all three products not a genuine operational surplus but a timing artefact. Shipments received near month-end generate deliveries recorded in January, creating an apparent excess in December and inflating January shrinkage figures. This must be interpreted at the shipment level rather than the monthly calendar level for accuracy.
 
+
 **How Has Each Product's Financial Loss Evolved Over the Four Years? (Stacked Bar Chart)**
 
 2021 dominates as the highest loss year for all three products the widest bars on the chart confirming that the worst of the network's shrinkage problem occurred at the start of the analysis period before operational improvements took effect.
@@ -381,6 +418,7 @@ December consistently shows negative shrinkage across all three products not a g
 Regular Gasoline's bar shrinks most dramatically from 2021 to 2024 reflecting both the improvement in gasoline shrinkage rate and the broader network improvements that disproportionately benefited the highest-volume product.
 
 By 2024, the bars for all three products are noticeably thinner than 2021 and 2022 a clear visual confirmation that financial losses are trending in the right direction across the entire product portfolio.
+
 
 **Which Individual Shipments Recorded the Highest Financial Losses? (Top 20 Shipments Table)**
 
@@ -391,6 +429,7 @@ SHP-06700 from Beaumont Depot records the highest shrinkage rate in the table at
 All 20 shipments in the table are classified as High Risk, confirming that the top 20 financial loss shipments are all operating at extreme shrinkage levels that go well beyond normal operational tolerance and require individual investigation.
 
 ---
+
 
 ## DAX Measures
 
@@ -413,6 +452,8 @@ All DAX measures are stored in a dedicated _Measures table in Power BI. Key meas
 
 ---
 
+
+
 ## Key Insights
 
 ### Insight 1: The Network Lost $115.41M Over Four Years, But Is Improving
@@ -423,6 +464,8 @@ All DAX measures are stored in a dedicated _Measures table in Power BI. Key meas
 
 **Recommendation:** Identify and document the specific operational changes that drove the 2022–2024 improvement and institutionalise them as standard operating procedures across all eight depots.
 
+
+
 ### Insight 2: All Eight Depots Exceed the Industry Benchmark
 
 **Finding:** Not a single depot in the VistaFuel network meets the 0.5% industry benchmark for shrinkage rate. The best performer, Houston Terminal, still records 0.61% 22% above benchmark. The worst, Tampa Terminal, records 1.89% nearly four times the benchmark.
@@ -430,6 +473,8 @@ All DAX measures are stored in a dedicated _Measures table in Power BI. Key meas
 **Business Impact:** The fact that all eight depots are above benchmark indicates a systemic network-wide issue rather than isolated depot-level problems. This points to a common root cause, likely a combination of aging infrastructure, measurement methodology, and product handling standards that no amount of depot-specific intervention alone will fully resolve.
 
 **Recommendation:** Commission a network-wide infrastructure audit focusing on meter calibration, storage tank integrity, and delivery measurement accuracy across all eight locations simultaneously.
+
+
 
 ### Insight 3: Tampa Terminal Is Worsening Year Over Year
 
@@ -439,6 +484,8 @@ All DAX measures are stored in a dedicated _Measures table in Power BI. Key meas
 
 **Recommendation:** Conduct an emergency operational review at Tampa Terminal, including physical inspection of storage tanks, delivery meters, and pipeline connections. Prioritise Tampa Terminal for infrastructure investment in the next capital expenditure cycle.
 
+
+
 ### Insight 4: Gasoline Accounts for 47% of All Financial Losses
 
 **Finding:** Regular Gasoline generated $51.0M of the $114.1M total network loss 47% of all losses. Its 1.51% shrinkage rate is the highest of the three products, and seasonal analysis confirms January and July as peak loss months aligned with high gasoline throughput and summer heat-driven evaporation.
@@ -447,6 +494,8 @@ All DAX measures are stored in a dedicated _Measures table in Power BI. Key meas
 
 **Recommendation:** Implement a gasoline vapour recovery programme at the five highest-risk depots. Prioritise operations in June through August when heat-driven evaporation is at its peak. Consider floating roof tank upgrades for high-volume gasoline storage.
 
+
+
 ### Insight 5: 85 Extreme Outlier Shipments Require Urgent Investigation
 
 **Finding:** 85 individual shipments recorded shrinkage rates above 75%, meaning more than three-quarters of the product received never reached the customer. These 85 shipments are responsible for a significant share of the network's total financial losses and represent a pattern that cannot be explained by normal operational loss alone.
@@ -454,6 +503,8 @@ All DAX measures are stored in a dedicated _Measures table in Power BI. Key meas
 **Business Impact:** Extreme shrinkage events of this magnitude typically indicate one of three causes: catastrophic spillage or storage tank failure, measurement or data recording errors, or deliberate product diversion or theft. Each scenario has different operational, financial, and legal implications. The top shipment alone (SHP-07162) recorded a $2.95M loss.
 
 **Recommendation:** Conduct an immediate investigation into all 85 flagged shipments. Cross-reference each shipment ID against physical delivery records, driver logs, and customer receipts to determine whether the loss is physical, measurement-based, or indicative of fraud or theft. Escalate confirmed cases to the relevant operational or legal team.
+
+
 
 ### Insight 6: Shrinkage Rate Percentage Alone Is Misleading
 
@@ -464,6 +515,8 @@ All DAX measures are stored in a dedicated _Measures table in Power BI. Key meas
 **Recommendation:** Establish a dual-metric risk framework that ranks depots and shipments by both shrinkage rate percentage and absolute financial loss value simultaneously. Operational resources should be allocated based on the combined risk score, not either metric in isolation.
 
 ---
+
+
 
 ## Recommendations and Action Plans
 
@@ -480,6 +533,8 @@ All DAX measures are stored in a dedicated _Measures table in Power BI. Key meas
 
 ---
 
+
+
 ## Limitations
 
 - The dataset is fully synthetic. Results reflect designed patterns rather than genuinely discovered real-world findings. In a live deployment, all findings would require validation against actual meter data management system exports and delivery confirmation records.
@@ -490,6 +545,8 @@ All DAX measures are stored in a dedicated _Measures table in Power BI. Key meas
 - The extreme outlier shipments (85 shipments with >75% shrinkage) may in part reflect data generation artefacts rather than genuine operational events. In a real dataset, these would require physical investigation to confirm before being used as the basis for financial claims.
 
 ---
+
+
 
 ## Conclusion
 
