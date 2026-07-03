@@ -260,6 +260,8 @@ Clear seasonal patterns emerge in monthly shrinkage data. January and July consi
 
 ### Page 1: Network Overview
 
+[Interact With Dashboard Here](VistaFuel_Analysis/VistaFuel_Analysis.pbix)
+
 ![Page1](Page1/Page1.JPG)
 
 The overview page provides leadership with a one-glance summary of network-wide shrinkage performance.
